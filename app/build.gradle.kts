@@ -41,7 +41,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.12.0")
 
     // Lifecycle (STABLE + EXISTS)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
+    implementation(   "androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
 
     // Compose (BOM — prevents version conflicts)

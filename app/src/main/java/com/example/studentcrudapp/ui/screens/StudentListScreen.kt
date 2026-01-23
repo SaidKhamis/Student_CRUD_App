@@ -13,30 +13,34 @@ import com.example.studentcrudapp.viewmodel.StudentViewModel
 
 @Composable
 fun StudentListScreen(viewModel: StudentViewModel) {
+
     val students by viewModel.students.collectAsState()
 
-    var name by remember {mutableStateOf("")}
-    var course by remember {mutableStateOf("")}
+    var name by remember { mutableStateOf("") }
+    var course by remember { mutableStateOf("") }
 
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
+
         TextField(
             value = name,
-            onValueChange = {name = it},
-            label = {Text("Name")},
+            onValueChange = { name = it },
+            label = { Text("Name") },
             modifier = Modifier.fillMaxWidth()
         )
+
         Spacer(modifier = Modifier.height(8.dp))
 
         TextField(
             value = course,
-            onValueChange = {course = it},
-            label = {Text("Course")},
+            onValueChange = { course = it },
+            label = { Text("Course") },
             modifier = Modifier.fillMaxWidth()
         )
+
         Spacer(modifier = Modifier.height(12.dp))
 
         Button(
@@ -53,6 +57,7 @@ fun StudentListScreen(viewModel: StudentViewModel) {
         ) {
             Text("Add Student")
         }
+
         Spacer(modifier = Modifier.height(16.dp))
 
         LazyColumn {
